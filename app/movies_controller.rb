@@ -4,7 +4,6 @@
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
 #   movie = __                     #   movie = Movie.new
 # end                              # end
-require 'pry'
 
 def can_be_instantiated_and_then_saved
   movie = Movie.new
@@ -58,7 +57,7 @@ def can_find_using_where_clause_and_be_sorted
   Movie.find_each do |m|
     after_2002 << m.find_by(release_date > 2002)
   end
-  binding.pry
+  
 end
 
 def can_be_found_updated_and_saved
